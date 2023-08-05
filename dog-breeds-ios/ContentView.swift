@@ -23,12 +23,12 @@ struct ContentView: View {
                     .resizable()
                     .cornerRadius(22)
                     .aspectRatio(contentMode: .fit)
-                    .padding(.all)
                     .shadow(radius: 16)
                 Text(breed)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    
+                    
                 VStack {
                     HStack {
                         Text("Care")
@@ -53,20 +53,21 @@ struct ContentView: View {
                             Image(systemName: "star")
                         }
                     }
-                    .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 }.font(.subheadline)
                 Spacer()
                 Button("Change breed") {
                     changeBreed()
                 }
                 .font(.title2)
-                .fontWeight(.semibold)
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .background(.black)
+                .fontWeight(.semibold)
+                .frame(maxWidth: .infinity)            .background(.black)
                 .foregroundColor(.white)
                 .cornerRadius(32)
             }
-            .padding()
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
             
         }
         .background(zStackColor)
